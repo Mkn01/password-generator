@@ -1,6 +1,34 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+// a prompt box to get the number of characters needed for the password
+
+// save the number of characters that was in the input in an array
+
+// a confirm box to confirm with the user if they would like to include numeric characters
+
+//if yes push to array
+
+//if no move on to next confirm box
+
+// a confirm box to confirm with the user if they would like to include lowercase characters
+
+//if yes push to array
+
+//if no move on to next confirm box
+
+// a confirm box to confirm with the user if they would like to include uppercase characters
+
+//if yes push to array
+
+//if no move on to next confirm box
+
+// a confirm box to confirm with the user if they would like to include special characters
+
+//if yes push to array
+
+//if no move on to next confirm box
+
 const getPasswordLength = () => {
   return 10;
 };
