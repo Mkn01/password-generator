@@ -30,7 +30,13 @@ const generateBtn = document.querySelector("#generate");
 //if no move on to next confirm box
 
 const getPasswordLength = () => {
-  return 10;
+  const passwordLength = prompt("Enter password length");
+
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please provide a password between 8 and 128 characters!");
+    return null;
+  }
+  return passwordLength;
 };
 
 const getPasswordCriteria = () => {
@@ -50,7 +56,9 @@ const createRandomPassword = () => {
 const generatePassword = () => {
   // get the password length
   const passwordLength = getPasswordLength();
-
+  if (passwordLength === null) {
+    return null;
+  }
   // get the password criteria
   const passwordCriteria = getPasswordCriteria();
 
@@ -63,6 +71,9 @@ const generatePassword = () => {
 // Write password to the #password input
 const writePassword = () => {
   const password = generatePassword();
+  if (password === null) {
+    return;
+  }
   const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
