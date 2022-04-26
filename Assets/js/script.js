@@ -1,34 +1,6 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
-// a prompt box to get the number of characters needed for the password
-
-// save the number of characters that was in the input in an array
-
-// a confirm box to confirm with the user if they would like to include numeric characters
-
-//if yes push to array
-
-//if no move on to next confirm box
-
-// a confirm box to confirm with the user if they would like to include lowercase characters
-
-//if yes push to array
-
-//if no move on to next confirm box
-
-// a confirm box to confirm with the user if they would like to include uppercase characters
-
-//if yes push to array
-
-//if no move on to next confirm box
-
-// a confirm box to confirm with the user if they would like to include special characters
-
-//if yes push to array
-
-//if no move on to next confirm box
-
 const getPasswordLength = () => {
   const passwordLength = prompt("Enter password length");
 
@@ -43,74 +15,59 @@ const getPasswordCriteria = () => {
   const passwordCriteriaLowerCase = confirm(
     "Would you like lowercase letters in your password?"
   );
+  // If the user presses ok (true) an array of lowercase letters is created.
+  if (true) {
+    const lowerCase = [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
+  }
+
   const passwordCriteriaUpperCase = confirm(
     "would you like Uppercase letters in your password?"
   );
+  // If the user presses ok (true) an array of uppercase letters is created.
+  if (true) {
+    const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
   const passwordCriteriaNumbers = confirm(
     "would you like numbers is your password?"
   );
+  // If the user presses ok (true) an array of lowercase letters is created.
+  if (true) {
+    const numbers = ["0","1","2","3","4","5","6","7","8","9"]
+
   const passwordCriteriaSpecialCharacter = confirm(
     "Would you like any special characters in your password?"
   );
 
-  const lowerCaseLetters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-  const uppercaseLetters = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
-  const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const specialCharecters = [" ","!","\",""","#","$","%","&","'","(","")"","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
+
+  passwordCriteria = math.floor(math.random() * passwordLength);
+
   return [
     "abcdefghijklmnopqrstuvwxyz",
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
