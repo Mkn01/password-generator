@@ -113,7 +113,7 @@ const createRandomPassword = (passwordLength, passwordCriteria) => {
     password.push;
     password;
   }
-
+  // password to be returned when button is clicked
   return password.join("");
 };
 

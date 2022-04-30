@@ -20,6 +20,7 @@ You can find the application deployed to github pages [here] (https://mkn01.gith
 - CSS
 - GitHub Pages
 - Java script
+- Google chrome
 
 ## Screenshots
 
