@@ -1,5 +1,6 @@
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
+// Array of uppercase letters if uppercase criteria is selected
 const upperCase = [
   "A",
   "B",
@@ -28,6 +29,7 @@ const upperCase = [
   "Y",
   "Z",
 ];
+// Array of lowercase letters if lowercase criteria is selected
 const lowerCase = [
   "a",
   "b",
@@ -56,14 +58,17 @@ const lowerCase = [
   "y",
   "z",
 ];
+// Array of  numbers if numbers criteria is selected
 const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// Array of special characters if special characters  criteria is selected
 const specialCharacters = " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~".split("");
+// getting the password length from an input from the user
 const getPasswordLength = () => {
-  const passwordLength = parseInt(prompt("Enter password length"), 10);
+  const passwordLength = parseInt(prompt("Enter password length"));
 
   return passwordLength;
 };
-
+// getting the criteria for the password from the user using confirm boxes and creating an array if that criteria is selected with the selected criteria array
 const getPasswordCriteria = () => {
   let passwordCriteria = [];
   const passwordCriteriaLowerCase = confirm(
@@ -85,7 +90,7 @@ const getPasswordCriteria = () => {
   const passwordCriteriaNumbers = confirm(
     "would you like numbers is your password?"
   );
-  // If the user presses ok (true) an array of lowercase letters is created.);
+  // If the user presses ok (true) an array of numbers is created.
 
   if (passwordCriteriaNumbers) {
     passwordCriteria = [...passwordCriteria, ...numbers];
@@ -98,22 +103,32 @@ const getPasswordCriteria = () => {
   if (passwordCriteriaSpecialCharacter) {
     passwordCriteria = [...passwordCriteria, ...specialCharacters];
   }
+  // if no criteria is selected an alert box appears  otherwise a password criteria array is created with the selected criteria
+  if (
+    !passwordCriteriaLowerCase &&
+    !passwordCriteriaUpperCase &&
+    !passwordCriteriaNumbers &&
+    !passwordCriteriaSpecialCharacter
+  ) {
+    alert("Please choose at least one criteria!");
+    return null;
+  }
   return passwordCriteria;
 };
 
-//incomplete
 const createRandomPassword = (passwordLength, passwordCriteria) => {
-  console.log(passwordCriteria);
+  console.log(passwordLength);
   const password = [];
   // for the password have a for loop
+  // to ensure we have the user input password length
+  // to select a random index from password criteria array that is within the array
   for (let i = 0; i < passwordLength; i++) {
-    // generate  the random index
-    passwordCriteria = [Math.floor(Math.random())];
-    //pick a random value from the array and push on the password array
-    password.push;
-    password;
+    const randomIndex = Math.floor(Math.random() * passwordCriteria.length - 1);
+    // random character array is created with random index's from password criteria array that is then pushed into the new random character array so we get characters in our password printed when we return our password in a string
+    const randomCharacter = passwordCriteria[randomIndex];
+    password.push(randomCharacter);
   }
-  // password to be returned when button is clicked
+  // password to be returned when button is clicked in a string
   return password.join("");
 };
 
@@ -121,7 +136,7 @@ const createRandomPassword = (passwordLength, passwordCriteria) => {
 const generatePassword = () => {
   // get the password length
   const passwordLength = getPasswordLength();
-  if (passwordLength > 8 && passwordLength < 128) {
+  if (passwordLength >= 8 && passwordLength <= 128) {
     // get the password criteria
     const passwordCriteria = getPasswordCriteria();
 

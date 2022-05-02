@@ -12,7 +12,7 @@ TODO
 
 ## Deployed URL
 
-You can find the application deployed to github pages [here] (https://mkn01.github.io/password-generator/)
+You can find the application deployed to github pages (https://mkn01.github.io/password-generator/)
 
 ## Technologies
 
@@ -24,10 +24,10 @@ You can find the application deployed to github pages [here] (https://mkn01.gith
 
 ## Screenshots
 
-### Desktop Viewports
+### Desktop Viewport
 
-(./assets/passwordgenerator.jpg)
+! [password generator](./assets/password%20generator.jpg)
 
-### Mobile Viewports
+### Mobile Viewport
 
-(./assets/passwordgeneratormobile.jpg
+![password generator mobile](./assets/password%20generator%20mobile.jpg)
